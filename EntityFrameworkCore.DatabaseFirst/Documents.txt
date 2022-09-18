@@ -2,6 +2,7 @@
 
 * dotnet tool install --global dotnet-ef
 * dotnet tool update --global dotnet-ef
+* Microsoft.EntityFrameworkCore.SqlServer
 * dotnet add package Microsoft.EntityFrameworkCore.Design
 * dotnet ef
 * dotnet ef dbcontext scaffold "Server=.;Initial Catalog=Test" Microsoft.EntityFrameworkCore.SqlServer --output-dir "C:\\" --context-dir "C:\\"
@@ -10,7 +11,8 @@
 
 
 Package Manager Console
-* Microsoft.EntityFrameworkCore.tools
-* Scaffold-DbContext 'Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Chinook' Microsoft.EntityFrameworkCore.SqlServer -OutputDir "C:\\" -ContextDir  "C:\\"
-* Scaffold-DbContext 'Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Chinook' Microsoft.EntityFrameworkCore.SqlServer -OutputDir "C:\\" -ContextDir  "C:\\" -Tables X, Y,Z
-* Scaffold-DbContext 'Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Chinook' Microsoft.EntityFrameworkCore.SqlServer -OutputDir "C:\\" -ContextDir  "C:\\" -Force
+* Microsoft.EntityFrameworkCore.Tools
+* Microsoft.EntityFrameworkCore.SqlServer
+* Scaffold-DbContext "Server=.;Database=Test;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir "C:\\" -ContextDir  "C:\\"
+* Scaffold-DbContext "Server=.;Database=Test;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir "C:\\" -ContextDir  "C:\\" -Tables X, Y,Z
+* Scaffold-DbContext "Server=.;Database=Test;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer -OutputDir "C:\\" -ContextDir  "C:\\" -Force
